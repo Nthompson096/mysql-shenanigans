@@ -46,6 +46,9 @@ An explanation here, use basically tells the DBMS to use this database schema in
     
 Basically inserting data into an existing table, can use null (empty) values.
 
+## Where, Like, soundEX
+I'll have you two examples for where.
+
 ## Update table
 
     UPDATE Customers
@@ -53,18 +56,20 @@ Basically inserting data into an existing table, can use null (empty) values.
     cust_zip = '1910',
     cust_country = 'USA'
     WHERE cust_id = '1000000010';
-
+    
 Used to update values, including empty ones.
 
-## Copy a table
+## Like
 
-    CREATE TABLE Custnew AS SELECT * FROM Customers;
+select prod_name, prod_desc 
+from Products
+where prod_desc LIKE '%toy%carrot%';
 
-As the title suggest, copies the table; great for editing stuff instead of working on live data directly.
+Like is basically searching for something LIKE toy carrot, basically think of it sort of like google almost
 
 ## Concatenated distinct query
 
-    SELECT DISTINCT
+SELECT DISTINCT
     quantity,
     LTRIM(cust_id) AS CID,
     CONCAT(RTRIM(cust_address),
@@ -81,19 +86,27 @@ As the title suggest, copies the table; great for editing stuff instead of worki
             ' (',
             RTRIM(vend_state),
             ')') AS VENDADDRESS
-    FROM
+FROM
     Products,
     Customers,
     Vendors,
     OrderItems
-    WHERE
-    cust_email IS NOT NULL
-        AND cust_state IS NOT NULL
-        AND vend_state IS NOT NULL
-    ORDER BY quantity ASC;
+WHERE soundex(cust_contact) = SOUNDEX('Michael Green')
+		 AND quantity
+#		 AND cust_email IS NOT NULL
+         AND cust_state IS NOT NULL
+         AND vend_state IS NOT NULL
+ORDER BY quantity ASC;
     
 This one is tricky, basically what I had just told the database is to organize cust_id and cust_address into one, and to add in () for example: 10000010 1911 Oak Park (PA) USA and it would
-go on so and and so forth, I also told the database to order by quantity Ascending, and not show null values for the specific columns, also would show unique items.
+go on so and and so forth, I also told the database to order by quantity Ascending, and not show null values for the specific columns, also would show unique items. The AND is used to add in when you place in where.
+
+
+## Copy a table
+
+    CREATE TABLE Custnew AS SELECT * FROM Customers;
+
+As the title suggest, copies the table; great for editing stuff instead of working on live data directly.
 
 # Delete drop
 
