@@ -87,7 +87,7 @@ As the title suggest, copies the table; great for editing stuff instead of worki
     ORDER BY quantity ASC;
     
 This one is tricky, basically what I had just told the database is to organize cust_id and cust_address into one, and to add in () for example: 10000010 1911 Oak Park (PA) USA and it would
-go on so and and so forth, I also told the database to order by quantity Ascending, and not show null values for the specific columns.
+go on so and and so forth, I also told the database to order by quantity Ascending, and not show null values for the specific columns, also would show unique items.
 
 # Delete drop
 
