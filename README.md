@@ -57,7 +57,7 @@ I'll have you two examples for where.
     cust_country = 'USA'
     WHERE cust_id = '1000000010';
     
-Used to update values, including empty ones.
+Used to update values, including empty ones, where is used to specify the value of cust_id; can be used for other things as well such as LIKE. 
 
 ## Like
 
