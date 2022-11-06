@@ -61,9 +61,9 @@ Used to update values, including empty ones.
 
 ## Like
 
-select prod_name, prod_desc 
-from Products
-where prod_desc LIKE '%toy%carrot%';
+    select prod_name, prod_desc 
+    from Products
+    where prod_desc LIKE '%toy%carrot%';
 
 Like is basically searching for something LIKE toy carrot, basically think of it sort of like google almost
 
