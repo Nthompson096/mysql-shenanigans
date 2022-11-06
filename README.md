@@ -98,7 +98,7 @@ Like is basically searching for something LIKE toy carrot, basically think of it
          AND vend_state IS NOT NULL
     ORDER BY quantity ASC;
     
-This one is tricky, basically what I had just told the database is to organize cust_id and cust_address into one, and to add in () for example: 10000010 1911 Oak Park (PA) USA and it would
+This one is tricky, basically what I had just told the database is to organize cust_id AS CID. cust_address and cust_state as cust_address, and to add in () for example: 10000010 1911 Oak Park (PA) USA and it would
 go on so and and so forth, I also told the database to order by quantity Ascending, and not show null values for the specific columns, also would show unique items. The AND is used to add in when you place in where. SoundEX basically a phonetic algorithm to figure out the sound of what something sounds LIKE.
 
 
