@@ -47,7 +47,7 @@ An explanation here, use basically tells the DBMS to use this database schema in
 Basically inserting data into an existing table, can use null (empty) values.
 
 ## Where, Like, soundEX
-I'll have you two examples for where.
+I'll have you three examples for where.
 
 ## Update table
 
