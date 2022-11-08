@@ -33,6 +33,7 @@ these examples I got from [Ben Fota](https://raw.githubusercontent.com/Nthompson
 The CHAR() function returns the character based on the ASCII code.
 The int data type is the primary integer data type in SQL Server. 
 The bigint data type is intended for use when integer values might exceed the range that is supported by the int data type.
+
 [A website from microsoft about init](https://learn.microsoft.com/en-us/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql?view=sql-server-ver16)
 
 
